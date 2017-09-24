@@ -523,7 +523,7 @@
      */
     function maskValueStandard(value, settings) {
         var v = parseFloat(value);
-        if (!isNaN(v)) {
+        if (!isNaN(v) && value.indexOf(" ") === -1) {
             value = v.toFixed(settings.precision) + '';
         }
 
